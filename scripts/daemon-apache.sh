@@ -3,17 +3,17 @@
 # Setup variables
 EXEC=/usr/bin/jsvc
 JAVA_HOME=/usr/lib/jvm/java-7-oracle
-CLASS_PATH="/usr/share/java/commons-daemon.jar":"/home/jrong/Sites/Daemon01/build/distributions/Daemon01/lib/*"
+CLASS_PATH="/usr/share/java/commons-daemon.jar":"/home/jrong/Sites/Daemon01/build/install/Daemon01/lib/*"
 CLASS=com.rainmore.java.daemon.apache.DaemonApp
 USER=jrong
 PID=/tmp/example.pid
 LOG_OUT=/tmp/example.out
 LOG_ERR=/tmp/example.err
-JAVA_OPTS="-Ddistribution.dir=/tmp"
+JAVA_OPTS="-Ddistribution.dir=/tmp -Dttt.ttt=sasdfs"
 
 do_exec()
 {
-    $EXEC -home "$JAVA_HOME" -cp $CLASS_PATH -user $USER -outfile $LOG_OUT -errfile $LOG_ERR -pidfile $PID $1 $CLASS
+    $EXEC -home "$JAVA_HOME" -cp $CLASS_PATH -user $USER -outfile $LOG_OUT -errfile $LOG_ERR -pidfile $PID $JAVA_OPTS $1 $CLASS
 }
 
 case "$1" in
