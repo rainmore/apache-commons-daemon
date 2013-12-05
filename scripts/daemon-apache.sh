@@ -4,7 +4,7 @@
 EXEC=/usr/bin/jsvc
 JAVA_HOME=/usr/lib/jvm/java-7-oracle
 CLASS_PATH="/usr/share/java/commons-daemon.jar":"/home/jrong/Sites/Daemon01/build/distributions/Daemon01/lib/*"
-CLASS=com.worldmanager.daemon.apache.DaemonApp
+CLASS=com.rainmore.java.daemon.apache.DaemonApp
 USER=jrong
 PID=/tmp/example.pid
 LOG_OUT=/tmp/example.out
