@@ -1,0 +1,22 @@
+apply plugin: 'maven'
+apply plugin: 'idea'
+apply plugin: 'scala'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = 'com.worldmanager.daemon.apache.DaemonApp'
+
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.10.3'
+    compile 'commons-daemon.apache:commons-daemon.apache:1.0.15'
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile 'ch.qos.logback:logback-core:1.0.13'
+    compile 'ch.qos.logback:logback-classic:1.0.13'
+}
+
+
+
